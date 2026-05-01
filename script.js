@@ -2064,6 +2064,9 @@ async function initializeBackend() {
     .setProject(config.appwriteProjectId);
 
   accountClient = new AppwriteSdk.Account(backendClient);
+  if (typeof AppwriteSdk.TablesDB !== "function") {
+    throw new Error("Loaded Appwrite SDK does not include TablesDB. Please refresh after updating the SDK script.");
+  }
   tablesClient = new AppwriteSdk.TablesDB(backendClient);
   appState.backend.supabaseReady = true;
   appState.backend.lastError = "";
