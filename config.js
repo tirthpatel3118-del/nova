@@ -1,5 +1,5 @@
 window.APP_CONFIG = {
-  appwriteEndpoint: "https://cloud.appwrite.io/v1",
+  appwriteEndpoint: "https://fra.cloud.appwrite.io/v1",
   appwriteProjectId: "69f36044003919260400",
   appwriteDatabaseId: "nova",
   appwriteTables: {
